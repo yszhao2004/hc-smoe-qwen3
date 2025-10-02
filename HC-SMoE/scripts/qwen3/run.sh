@@ -6,7 +6,7 @@ export CUDA_VISIBLE_DEVICES=0
 
 accelerate launch --config_file static/finetune_config.yaml \
   --main_process_port 29512 hcsmoe/merging-qwen.py \
-  --model_name="/data/zhaoys/qwen3-moe" \
+  --model_name="Qwen/Qwen3-30B-A3B" \
   --task="winogrande,arc_challenge,arc_easy,boolq,hellaswag,mmlu,openbookqa,rte" \
   --dominant="random" \
   --similarity_base="expert-output" \
